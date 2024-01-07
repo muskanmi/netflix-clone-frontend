@@ -1,17 +1,12 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import Navbar from "../components/Navbar";
-import CardSlider from "../components/CardSlider";
 import { onAuthStateChanged } from "firebase/auth";
 import { firebaseAuth } from "../utils/firebase-config";
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { fetchMovies, getGenres, getUserLikedMovies } from "../store";
-import SelectGenre from "../components/SelectGenre";
-import Slider from "../components/Slider";
-import NotAvailable from "../components/NotAvailable";
+import { getUserLikedMovies } from "../store";
 import Card from "../components/Card";
-import Footer from "../components/Footer";
 
 const UserLiked = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -31,7 +26,7 @@ const UserLiked = () => {
     if(email) {
         dispatch(getUserLikedMovies(email));
     }
-  }, [email]);
+  }, [email,dispatch]);
 
   window.onscroll = () => {
     setIsScrolled(window.pageYOffset === 0 ? false : true);

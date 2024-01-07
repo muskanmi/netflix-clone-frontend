@@ -3,7 +3,7 @@ import styled from "styled-components";
 import BackgroundImage from "../components/BackgroundImage";
 import Header from "../components/Header";
 import {createUserWithEmailAndPassword, onAuthStateChanged} from 'firebase/auth';
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { firebaseAuth } from '../utils/firebase-config';
 
 const Signup = () => {

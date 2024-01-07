@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <Container className="grid-container">
             <div class="grid-child purple">
-                <img src={TmdbLogo} />
+                <img src={TmdbLogo} alt="not found" />
             </div>
             <div class="grid-child green">
                 <p>This product uses the TMDB API but is not endorsed or certified by TMDB.</p>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import logo from "../assets/logo.png"
-import { Link, useNavigate, useSearchParams } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {FaPowerOff, FaSearch} from "react-icons/fa";
 import { firebaseAuth } from "../utils/firebase-config";
 import { onAuthStateChanged, signOut } from "firebase/auth";
